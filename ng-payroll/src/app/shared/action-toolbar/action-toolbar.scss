@@ -4,54 +4,52 @@
   display: block;
   position: fixed;
   top: 0;
-  left: 0;
-  width: 80px; // Fixed width for the sidebar
+  right: 0;
   height: 100vh;
+  width: 70px; // Width of the toolbar
   background-color: $surface-color;
-  border-right: 1px solid $border-color;
+  border-left: 1px solid $border-color;
   z-index: 1000; // Ensure it stays on top of other content
 }
 
-.sidebar-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: $spacing-lg;
+.action-toolbar-container {
+  padding: $spacing-lg 0;
 }
 
-.nav-list {
+.action-list {
   list-style: none;
-  margin: 0;
   padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: $spacing-lg;
+  gap: $spacing-md;
 }
 
-.nav-item {
+.action-item {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 48px;
-  height: 48px;
-  border: none;
-  background: transparent;
+  width: 44px;
+  height: 44px;
   border-radius: $border-radius-md;
-  cursor: pointer;
+  border: none;
+  background-color: transparent;
   color: $icon-color-inactive;
+  cursor: pointer;
   transition: all 0.2s ease-in-out;
 
   &:hover {
-    color: $primary-color;
     background-color: $background-color;
+    color: $primary-color;
   }
 
   &.active {
-    color: $primary-color;
+    background-color: $primary-color;
+    color: white;
   }
 }
 
-.nav-icon {
-  font-size: 1.75rem; // Adjust size for icon/emoji
+.action-icon {
+  font-size: 1.5rem;
 }

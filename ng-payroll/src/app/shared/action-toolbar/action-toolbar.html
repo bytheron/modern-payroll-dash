@@ -1,0 +1,14 @@
+<nav class="action-toolbar-container" aria-label="Action Toolbar">
+  <ul class="action-list">
+    <li *ngFor="let action of actions">
+      <button
+        class="action-item"
+        [class.active]="action.id === activeActionId"
+        [attr.aria-label]="action.label"
+        (click)="onActionClick(action.id)">
+
+        <span class="action-icon">{{ action.icon }}</span>
+      </button>
+    </li>
+  </ul>
+</nav>

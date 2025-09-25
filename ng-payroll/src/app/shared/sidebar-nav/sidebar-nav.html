@@ -1,1 +1,11 @@
-<p>sidebar-nav works!</p>
+<nav class="sidebar-container" aria-label="Main Navigation">
+  <ul class="nav-list">
+    <li *ngFor="let item of navItems">
+      <button class="nav-item" [attr.aria-label]="item.label" [class.active]="item.id === activeItemId"
+        (click)="onItemClick(item.id)">
+
+        <span class="nav-icon">{{ item.icon }}</span>
+      </button>
+    </li>
+  </ul>
+</nav>

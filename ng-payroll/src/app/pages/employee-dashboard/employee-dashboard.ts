@@ -6,6 +6,7 @@ import { IViewData } from './../../core/schemas/interfaces/employee.interface';
 import { EmployeeDataService } from './../../core/services/employee-data.service';
 import { TasksTable } from './../../features/tasks-table/tasks-table';
 import { Header } from './../../shared/header/header';
+import { ActionToolbar, ToolbarAction } from '../../shared/action-toolbar/action-toolbar';
 
 @Component({
   selector: 'app-employee-dashboard',
@@ -15,7 +16,8 @@ import { Header } from './../../shared/header/header';
     AsyncPipe,
     UserProfile,
     TasksTable,
-    Header
+    Header,
+    ActionToolbar
   ],
   templateUrl: './employee-dashboard.html',
   styleUrls: ['./employee-dashboard.scss'],
@@ -24,7 +26,14 @@ import { Header } from './../../shared/header/header';
 export class EmployeeDashboard implements OnInit {
   public viewData$!: Observable<IViewData>;
 
-  constructor(private _employeeDataService: EmployeeDataService) {}
+  public readonly toolbarActions: ToolbarAction[] = [
+    { id: 'action1', label: 'Action 1', icon: '✔️' },
+    { id: 'action2', label: 'Action 2', icon: '🎓' }
+  ];
+
+  public selectedActionId: string | null = 'action2';
+
+  constructor(private _employeeDataService: EmployeeDataService) { }
 
   ngOnInit(): void {
     this.loadData();
@@ -45,5 +54,10 @@ export class EmployeeDashboard implements OnInit {
 
   public onPrimaryAction(): void {
     console.log('Primary action triggered');
+  }
+
+  public handleActionSelection(actionId: string): void {
+    this.selectedActionId = actionId;
+    console.log(`Toolbar action selected: ${actionId}`);
   }
 }

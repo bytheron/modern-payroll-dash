@@ -12,3 +12,8 @@
   </div>
 
 </ng-container>
+<app-action-toolbar
+  [actions]="toolbarActions"
+  [activeActionId]="selectedActionId"
+  (actionSelected)="handleActionSelection($event)">
+</app-action-toolbar>

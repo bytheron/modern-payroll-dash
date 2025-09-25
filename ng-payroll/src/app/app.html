@@ -1,5 +1,6 @@
 <app-main-layout>
-  <app-sidebar-nav />
+  <app-sidebar-nav [navItems]="navItems" [activeItemId]="activeNavItemId" (itemSelected)="onNavigate($event)">
+  </app-sidebar-nav>
 
   <app-employee-dashboard>
     <app-header />
