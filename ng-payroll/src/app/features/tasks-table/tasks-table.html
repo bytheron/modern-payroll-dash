@@ -1,0 +1,39 @@
+@if (tasks && tasks.length > 0) {
+  <table class="tasks-table">
+    <thead>
+      <tr>
+        <th (click)="onSort('name')">Name</th>
+        <th>Description</th>
+        <th (click)="onSort('type')">Type</th>
+        <th class="cell-numeric">Quantity</th>
+        <th class="cell-numeric">Rate</th>
+        <th></th> </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let task of tasks; trackBy: trackById">
+        <td>
+          <div class="cell-main-content">{{ task.name }}</div>
+        </td>
+        <td>{{ task.description || '-' }}</td>
+        <td>{{ task.type }}</td>
+        <td class="cell-numeric">{{ task.quantity }}</td>
+        <td class="cell-numeric">
+          @if (task.rate !== null) {
+            <span>
+              {{ task.rate | currency:'ZAR':'symbol':'1.2-2' }}
+            </span>
+          } @else {
+            <div class="table-state">No tasks found.</div>
+          }
+        </td>
+        <td>
+          <a class="action-link" (click)="onPrimaryActionClick(task.id)">Primary Action</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+} @else if (!tasks || !tasks.length) {
+  <div class="table-state">No tasks found.</div>
+} @else {
+  <div class="table-state">Loading tasks...</div>
+}

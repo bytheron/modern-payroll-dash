@@ -1,0 +1,25 @@
+<div class="header-container">
+  <app-search-input
+    placeholder="Search"
+    (searchChange)="onSearch($event)">
+  </app-search-input>
+
+  <div class="header-actions">
+    <app-button
+      label="Secondary"
+      style="secondary"
+      (click)="secondaryAction.emit()">
+    </app-button>
+
+    <app-button
+      label="Primary"
+      style="primary"
+      (click)="primaryAction.emit()">
+    </app-button>
+
+    <div class="action-icons">
+      <span class="icon">🔔</span>
+      <span class="icon">⚙️</span>
+    </div>
+  </div>
+</div>

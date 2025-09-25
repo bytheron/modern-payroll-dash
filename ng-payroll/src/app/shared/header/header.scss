@@ -1,0 +1,34 @@
+@use './../../styles/variables' as *;
+
+:host {
+  display: block;
+  padding: $spacing-md $spacing-xl;
+  background-color: $surface-color;
+  border-bottom: 1px solid $border-color;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+}
+
+.action-icons {
+  display: flex;
+  align-items: center;
+  gap: $spacing-lg;
+  margin-left: $spacing-lg;
+
+  .icon {
+    cursor: pointer;
+    color: $text-secondary;
+    width: 20px;
+    height: 20px;
+  }
+}

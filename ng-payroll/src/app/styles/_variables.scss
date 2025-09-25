@@ -1,0 +1,40 @@
+// Colors
+$primary-color:                         #4A90E2;
+$secondary-color:                       #F5F5F5;
+$background-color:                      #F7F8FA;
+$surface-color:                         #FFFFFF;
+
+$text-primary:                          #2D3748;
+$text-secondary:                        #718096;
+$text-light:                            #A0AEC0;
+$border-color:                          #E2E8F0;
+
+$icon-color-active:                     #4A90E2;
+$icon-color-inactive:                   #A0AEC0;
+$icon-bg-red:                           #FEE2E2;
+$icon-fg-red:                           #DC2626;
+$icon-bg-green:                         #D1FAE5;
+$icon-fg-green:                         #059669;
+
+// Typography
+$font-family-base: 'Inter', system-ui, sans-serif;
+$font-size-sm:                           0.875rem; // 14px
+$font-size-base:                             1rem; // 16px
+$font-weight-normal:                          400;
+$font-weight-medium:                          500;
+$font-weight-bold:                            700;
+
+// Spacing
+$spacing-base:                                8px;
+$spacing-xs:                  $spacing-base * 0.5; // 4px
+$spacing-sm:                        $spacing-base; // 8px
+$spacing-md:                    $spacing-base * 2; // 16px
+$spacing-lg:                    $spacing-base * 3; // 24px
+$spacing-xl:                    $spacing-base * 4; // 32px
+
+// Borders
+$border-radius-sm:                            4px;
+$border-radius-md:                            8px;
+
+// Box Shadow
+$box-shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);

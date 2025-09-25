@@ -1,0 +1,82 @@
+@use './../../styles/variables' as *;
+
+:host {
+  display: block;
+  background-color: $surface-color;
+  border-radius: $border-radius-md;
+  box-shadow: $box-shadow-soft;
+  padding: $spacing-lg;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+  margin-bottom: $spacing-xl;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  background-color: $primary-color;
+  border-radius: 50%;
+}
+
+.profile-info {
+  .name {
+    font-size: 1.125rem;
+    font-weight: $font-weight-bold;
+    color: $text-primary;
+    margin: 0;
+  }
+
+  .details {
+    font-size: $font-size-sm;
+    color: $text-secondary;
+    margin: $spacing-xs 0 0;
+  }
+}
+
+.overview-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $spacing-lg;
+}
+
+.overview-item {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+}
+
+.overview-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: $border-radius-md;
+
+  &--green {
+    background-color: $icon-bg-green;
+    color: $icon-fg-green;
+  }
+
+  &--red {
+    background-color: $icon-bg-red;
+    color: $icon-fg-red;
+  }
+}
+
+.overview-details {
+  .label {
+    font-size: $font-size-sm;
+    color: $text-secondary;
+  }
+
+  .value {
+    font-size: 1.125rem;
+    font-weight: $font-weight-bold;
+    color: $text-primary;
+  }
+}

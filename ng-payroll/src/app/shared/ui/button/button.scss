@@ -1,0 +1,30 @@
+@use './../../../styles/variables' as *;
+
+.btn {
+  padding: $spacing-sm $spacing-md;
+  border: 1px solid transparent;
+  border-radius: $border-radius-md;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  &--primary {
+    background-color: $primary-color;
+    color: white;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+
+  &--secondary {
+    background-color: $secondary-color;
+    border-color: $border-color;
+    color: $text-primary;
+
+    &:hover {
+      background-color: $border-color;
+    }
+  }
+}

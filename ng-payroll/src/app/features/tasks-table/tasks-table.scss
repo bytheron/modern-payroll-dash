@@ -1,0 +1,79 @@
+@use './../../styles/variables' as *;
+
+:host {
+  display: block;
+  background-color: $surface-color;
+  border-radius: $border-radius-md;
+  box-shadow: $box-shadow-soft;
+  overflow-x: auto;
+}
+
+.tasks-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: $font-size-sm;
+}
+
+thead {
+  th {
+    padding: $spacing-md $spacing-lg;
+    text-align: left;
+    font-weight: $font-weight-medium;
+    color: $text-secondary;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 2px solid $border-color;
+    cursor: pointer;
+
+    .sort-icon {
+      margin-left: $spacing-sm;
+      opacity: 0.5;
+    }
+  }
+}
+
+tbody {
+  tr {
+    border-bottom: 1px solid $border-color;
+    transition: background-color 0.2s ease;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &:hover {
+      background-color: $background-color;
+    }
+  }
+
+  td {
+    padding: $spacing-md $spacing-lg;
+    color: $text-primary;
+    vertical-align: middle;
+
+    .description {
+      color: $text-secondary;
+      font-size: 0.8rem;
+    }
+  }
+}
+
+.cell-main-content {
+  font-weight: $font-weight-medium;
+}
+
+.cell-numeric {
+  text-align: right;
+  font-family: monospace;
+}
+
+.action-link {
+  color: $primary-color;
+  font-weight: $font-weight-medium;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,83 @@
+export const MOCK_USER_PROFILE = {
+  "name": "Hannah Smoterich-Barr",
+  "employeeId": "E008",
+  "role": "General worker",
+  "overview": {
+    "currency": "ZAR",
+    "totalEarnings": 13140.68,
+    "totalRate": 12000.00,
+    "netTotal": 1140.68,
+    "deductions": {
+      "paye": 35.32,
+      "uif": 0.00,
+      "total": 35.32
+    }
+  }
+};
+
+export const MOCK_TASKS = [
+  {
+    "id": "tsk_001",
+    "name": "Drafting",
+    "description": "Lorem ipsum dolor",
+    "type": "Group 1",
+    "quantity": 3,
+    "rate": 20.00
+  },
+  {
+    "id": "tsk_002",
+    "name": "Driving",
+    "description": null,
+    "type": "Group 1",
+    "quantity": 4,
+    "rate": null
+  },
+  {
+    "id": "tsk_003",
+    "name": "Cutting",
+    "description": null,
+    "type": "Group 2",
+    "quantity": 6,
+    "rate": null
+  },
+  {
+    "id": "tsk_004",
+    "name": "Task 1",
+    "description": "Lorem ipsum dolor",
+    "type": "Group 3",
+    "quantity": 3,
+    "rate": 400.00
+  },
+  {
+    "id": "tsk_005",
+    "name": "Task 2",
+    "description": null,
+    "type": "Group 2",
+    "quantity": 4,
+    "rate": 599.00
+  },
+  {
+    "id": "tsk_006",
+    "name": "Task 3",
+    "description": null,
+    "type": "Group 3",
+    "quantity": 6,
+    "rate": 60.00
+  },
+  {
+    "id": "tsk_007",
+    "name": "Task 4",
+    "description": "Lorem ipsum dolor",
+    "type": "Group 2",
+    "quantity": 3,
+    "rate": 80.00
+  },
+  {
+    "id": "tsk_008",
+    "name": "Task 5",
+    "description": "Lorem ipsum dolor",
+    "type": "Group 1",
+    "quantity": 4,
+    "rate": 100.00
+  }
+];

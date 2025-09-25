@@ -1,0 +1,56 @@
+@if (profileData) {
+  <div class="profile-header">
+    <div class="avatar">
+    </div>
+    <div class="profile-info">
+      <h2 class="name">{{ profileData.name }}</h2>
+      <p class="details">{{ profileData.employeeId }} &bull; {{ profileData.role }}</p>
+    </div>
+  </div>
+
+  <div class="overview-grid">
+    <div class="overview-item">
+      <div class="overview-icon overview-icon--green">
+        📈
+      </div>
+      <div class="overview-details">
+        <span class="label">Total Earnings</span>
+        <span class="value">{{ profileData.overview.totalEarnings |
+          currency:profileData.overview.currency:'symbol':'1.2-2' }}</span>
+      </div>
+    </div>
+
+    <div class="overview-item">
+      <div class="overview-icon overview-icon--red">
+        📉
+      </div>
+      <div class="overview-details">
+        <span class="label">Total Rate</span>
+        <span class="value">{{ profileData.overview.totalRate | currency:profileData.overview.currency:'symbol':'1.2-2'
+          }}</span>
+      </div>
+    </div>
+
+    <div class="overview-item">
+      <div class="overview-icon">
+        📄
+      </div>
+      <div class="overview-details">
+        <span class="label">PAYE</span>
+        <span class="value">{{ profileData.overview.deductions.paye |
+          currency:profileData.overview.currency:'symbol':'1.2-2' }}</span>
+      </div>
+    </div>
+
+    <div class="overview-item">
+      <div class="overview-icon">
+        🧮
+      </div>
+      <div class="overview-details">
+        <span class="label">Total</span>
+        <span class="value">{{ profileData.overview.deductions.total |
+          currency:profileData.overview.currency:'symbol':'1.2-2' }}</span>
+      </div>
+    </div>
+  </div>
+}
