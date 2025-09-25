@@ -1,7 +1,4 @@
 <ng-container *ngIf="viewData$ | async as data">
-
-  <app-header (primaryAction)="onPrimaryAction()" />
-
   <div class="dashboard-content">
     <app-user-profile
       [profileData]="data.userProfile" />

@@ -1,13 +1,5 @@
-<app-main-layout>
-  <app-sidebar-nav [navItems]="navItems" [activeItemId]="activeNavItemId" (itemSelected)="onNavigate($event)">
-  </app-sidebar-nav>
-
-  <app-employee-dashboard>
-    <app-header />
-
-    <div class="dashboard-content">
-      <app-user-profile />
-      <app-tasks-table />
-    </div>
-  </app-employee-dashboard>
+<app-main-layout 
+  [navItems]="navItems" 
+  [activeNavItemId]="activeNavItemId" 
+  (itemSelected)="onNavigate($event)">
 </app-main-layout>

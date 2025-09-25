@@ -1,0 +1,10 @@
+.main-layout-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  height: 100vh;
+}
+
+.main-content {
+  padding: 20px;
+  overflow-y: auto;
+}

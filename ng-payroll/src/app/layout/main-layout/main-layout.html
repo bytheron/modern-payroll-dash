@@ -1,1 +1,6 @@
-<ng-content></ng-content>
+<div class="main-layout-grid">
+  <app-sidebar-nav [navItems]="navItems" [activeItemId]="activeNavItemId" (itemSelected)="onNavigate($event)"></app-sidebar-nav>
+  <main class="main-content">
+    <router-outlet></router-outlet>
+  </main>
+</div>

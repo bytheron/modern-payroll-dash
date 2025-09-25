@@ -1,14 +1,12 @@
 import { Component, signal } from '@angular/core';
-import { TasksTable } from "./features/tasks-table/tasks-table";
-import { UserProfile } from "./features/user-profile/user-profile";
+import { RouterModule } from '@angular/router';
 import { MainLayout } from "./layout/main-layout/main-layout";
-import { EmployeeDashboard } from "./pages/employee-dashboard/employee-dashboard";
-import { Header } from "./shared/header/header";
-import { NavItem, SidebarNav } from "./shared/sidebar-nav/sidebar-nav";
+import { NavItem } from './shared/sidebar-nav/sidebar-nav';
 
 @Component({
   selector: 'app-root',
-  imports: [MainLayout, SidebarNav, EmployeeDashboard, Header, UserProfile, TasksTable],
+  standalone: true,
+  imports: [MainLayout, RouterModule],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

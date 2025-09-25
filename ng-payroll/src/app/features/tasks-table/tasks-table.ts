@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
 import { ITask } from '../../core/schemas/interfaces/employee.interface';
+import { Header } from '../../shared/header/header';
 
 // Define a type for sorting for better type safety
 export type SortDirection = 'asc' | 'desc';
@@ -12,7 +13,7 @@ export interface SortEvent {
 @Component({
   selector: 'app-tasks-table',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, Header],
   templateUrl: './tasks-table.html',
   styleUrls: ['./tasks-table.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -37,6 +38,10 @@ export class TasksTable {
 
     this._currentSort = { column, direction };
     this.sortChanged.emit(this._currentSort);
+  }
+
+  public onPrimaryAction(): void {
+    console.log('Primary action triggered');
   }
 
   public trackById(index: number, task: ITask): string {

@@ -2,9 +2,8 @@
 
 :host {
   display: block;
-  background-color: $surface-color;
+  background-color: white;
   border-radius: $border-radius-md;
-  box-shadow: $box-shadow-soft;
   padding: $spacing-lg;
 }
 
@@ -16,30 +15,29 @@
 }
 
 .avatar {
-  width: 48px;
-  height: 48px;
-  background-color: $primary-color;
+  width: 60px;
+  height: 60px;
+  background-color: $color-light-gray;
   border-radius: 50%;
 }
 
 .profile-info {
   .name {
-    font-size: 1.125rem;
+    font-size: $font-size-lg;
     font-weight: $font-weight-bold;
-    color: $text-primary;
+    color: $color-black;
     margin: 0;
   }
-
   .details {
     font-size: $font-size-sm;
-    color: $text-secondary;
+    color: $color-dark-gray;
     margin: $spacing-xs 0 0;
   }
 }
 
 .overview-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   gap: $spacing-lg;
 }
 
@@ -56,27 +54,26 @@
   width: 40px;
   height: 40px;
   border-radius: $border-radius-md;
+  font-size: 1.5rem;
 
   &--green {
-    background-color: $icon-bg-green;
-    color: $icon-fg-green;
+    background-color: #e8f5e9; // Light green
+    color: $color-success;
   }
-
   &--red {
-    background-color: $icon-bg-red;
-    color: $icon-fg-red;
+    background-color: #ffebee; // Light red
+    color: $color-danger;
   }
 }
 
 .overview-details {
   .label {
     font-size: $font-size-sm;
-    color: $text-secondary;
+    color: $color-dark-gray;
   }
-
   .value {
-    font-size: 1.125rem;
-    font-weight: $font-weight-bold;
-    color: $text-primary;
+    font-size: $font-size-lg;
+    font-weight: $font-weight-semibold;
+    color: $color-black;
   }
 }

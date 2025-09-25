@@ -5,7 +5,6 @@ import { UserProfile } from '../../features/user-profile/user-profile';
 import { IViewData } from './../../core/schemas/interfaces/employee.interface';
 import { EmployeeDataService } from './../../core/services/employee-data.service';
 import { TasksTable } from './../../features/tasks-table/tasks-table';
-import { Header } from './../../shared/header/header';
 import { ActionToolbar, ToolbarAction } from '../../shared/action-toolbar/action-toolbar';
 
 @Component({
@@ -16,7 +15,6 @@ import { ActionToolbar, ToolbarAction } from '../../shared/action-toolbar/action
     AsyncPipe,
     UserProfile,
     TasksTable,
-    Header,
     ActionToolbar
   ],
   templateUrl: './employee-dashboard.html',
@@ -50,10 +48,6 @@ export class EmployeeDashboard implements OnInit {
 
   public handleTaskAction(event: { taskId: string; action: string }): void {
     console.log(`Action: '${event.action}' triggered for Task ID: ${event.taskId}`);
-  }
-
-  public onPrimaryAction(): void {
-    console.log('Primary action triggered');
   }
 
   public handleActionSelection(actionId: string): void {
